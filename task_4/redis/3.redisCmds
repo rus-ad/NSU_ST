@@ -1,0 +1,20 @@
+MSET user:den:email "hello@world.com" user:den:phone "+77777777777"
+MGET user:den:email user:den:phone
+DEL user:den
+
+HMSET user:den email "hello@world.com" 
+HMSET user:den phone "+77777777777"
+HGET user:den email 
+HGET user:den phone
+
+HKEYS user:den
+HVALS user:den
+
+HDEL user:den email
+HVALS user:den
+
+HSET myhash field 5
+HINCRBY myhash field -10
+HGET myhash field
+
+HLEN user:den 

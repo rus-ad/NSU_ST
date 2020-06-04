@@ -1,0 +1,17 @@
+RPUSH den:wishlist 7wks gog prag
+LLEN den:wishlist
+LRANGE den:wishlist 0 -1
+
+LREM den:wishlist 0 gog
+LRANGE den:wishlist 0 -1
+
+LPOP den:wishlist
+LRANGE den:wishlist 0 -1
+
+LPUSH den:wishlist 7wks gog prag
+RPOP den:wishlist
+LRANGE den:wishlist 0 -1
+
+RPOPLPUSH den:wishlist den:visited
+LRANGE den:wishlist 0 -1
+LRANGE den:visited 0 -1

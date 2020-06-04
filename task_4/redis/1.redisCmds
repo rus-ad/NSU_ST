@@ -1,0 +1,18 @@
+SET Bahamas Nassau
+GET Bahamas
+MSET Lebanon Beirut Norway Oslo France Paris
+MGET Lebanon Norway Bahamas
+
+SET mykey "10"
+INCR mykey
+INCR mykey
+INCR mykey
+INCR mykey
+INCR mykey
+GET mykey
+
+SET foo 99999
+MULTI
+INCR foo
+DISCARD
+GET foo

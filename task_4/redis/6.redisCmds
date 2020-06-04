@@ -1,0 +1,10 @@
+SET ice "I'm melting..."
+EXPIRE ice 10
+TTL icej
+EXISTS ice
+SETEX ice 10 "I'm melting..."
+TTL ice
+PERSIST ice
+TTL ice
+EXPIREAT ice 1293840000
+TTL ice

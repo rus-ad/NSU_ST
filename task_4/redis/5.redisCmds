@@ -1,0 +1,27 @@
+SADD news nytimes.com pragprog.com
+SMEMBERS news
+SADD tech pragprog.com apple.com
+SINTER news tech
+SDIFF news tech
+SUNION news tech
+SUNIONSTORE websites news tech
+SMEMBERS websites
+
+SDIFFSTORE websites2 news tech
+SMEMBERS websites2
+
+SINTERSTORE websites3 news tech
+SMEMBERS websites3
+
+SADD myset "one"
+SADD myset "two"
+SADD myotherset "three"
+SMOVE myset myotherset "two"
+SMEMBERS myset
+SMEMBERS myotherset
+
+SCARD myset
+
+SPOP myotherset 2
+
+SREM myset "one"

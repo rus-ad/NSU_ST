@@ -1,0 +1,33 @@
+HSET myhash field1 "Hello"
+HSET myhash field1 "Hello 1"
+HSET myhash field1 "Hello 11"
+HSET myhash field1 "Hello 111"
+HSET myhash field1 "hello 1111" 
+HGET myhash field1
+
+LPUSH tutorials 1
+LPUSH tutorials 2
+LPUSH tutorials 3
+LPUSH tutorials 4
+LRANGE tutorials 0 10 
+
+LPUSH list2 0
+LPUSH list3 2
+BLPOP list1 list2 list3 0
+
+DEL list1 list2
+RPUSH list1 a b c
+BRPOP list1 list2 0
+
+SADD myset 1
+SADD myset 2
+SADD myset 2
+SMEMBERS myset
+
+ZADD zset 1 redis 
+ZADD zset 2 mongodb 
+ZADD zset 3 mysql 
+ZADD zset 3 mysql 
+ZADD zset 4 mysql 
+ZRANGE zset 0 10 WITHSCORES  
+
